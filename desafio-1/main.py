@@ -1,3 +1,6 @@
+import os
+path = "../desafio"
+
 def menu():
     print("0 - Sair")
     print("1 - Filtrar por nome do cliente")
@@ -17,7 +20,9 @@ while opcao != 0:
     if int(opcao) == 0:
         exit()
     elif int(opcao) == 1:
-        print("Filtrando por nome do cliente\n")
+        for rootdir, dirs , file in os.walk(path):
+            for subdir in file:
+                print(subdir)
     elif int(opcao) == 2:
         print("Filtrando por tipo de arquivo\n")
     elif int(opcao) == 3:
