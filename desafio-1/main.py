@@ -1,6 +1,16 @@
 import os
 path = "../desafio"
 
+def foundcliente(cliente):
+    found = 0
+    for rootdir, dirs , file in os.walk(path):
+        for file in file:
+            if (file.find(cliente.lower()) != -1) and (file[-1:] == cliente[-1:]):
+                print(file)
+                found+=1
+    if found == 0:
+        print("Não foi encontrado o cliente: "+cliente+"\n")
+
 def menu():
     print("0 - Sair")
     print("1 - Filtrar por nome do cliente")
@@ -19,16 +29,11 @@ while opcao != 0:
     
     if int(opcao) == 0:
         exit()
+
     elif int(opcao) == 1:
-        found = 0
         cliente = input("Digite o nome do cliente: ")
-        for rootdir, dirs , file in os.walk(path):
-            for file in file:
-                if (file.find(cliente.lower()) != -1) and (file[-1:] == cliente[-1:]):
-                    print(file)
-                    found+=1
-        if found == 0:
-            print("Não foi encontrado o cliente: "+cliente)
+        foundcliente(cliente)
+
     elif int(opcao) == 2:
         print("Filtrando por tipo de arquivo\n")
     elif int(opcao) == 3:
