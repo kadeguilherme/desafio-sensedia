@@ -13,7 +13,7 @@ def foundcliente(cliente):
     found = 0
     for rootdir, dirs , file in os.walk(path):
         for file in file:
-            if (file.find(cliente.lower()) != -1) and (file[-1:] == cliente[-1:]):
+            if (file.split('_')[-1] == cliente.lower()):
                 print(file)
                 found+=1
     if found == 0:
@@ -24,8 +24,9 @@ def deletecliente(cliente):
     found = 0
     for rootdir, dirs , file in os.walk(path):
         for file in file:
-            if (file.find(cliente.lower()) != -1) and (file[-1:] == cliente[-1:]):
-                os.remove(rootdir + "/" + file)
+            if (file.split('_')[-1] == cliente.lower()):
+                os.remove(os.path.join(rootdir, file))
+                exit()
                 found+=1
     if found == 0:
         print("Não foi encontrado o cliente: "+cliente+"\n")
