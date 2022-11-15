@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: kadeguilherme/desafio-2:1.0
+    ports:
+      - 8080:80
