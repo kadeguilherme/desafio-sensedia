@@ -1,13 +1,14 @@
 import os
 path = "../desafio"
 
-
+#FUNÇÃO QUE FAZ UMA BUSCA PELO DIRETORIO, SUBDIRETORIO E ARQUIVO
 def filtro(file):
     for rootdir, dirs , files in os.walk(path):
        for files in files:
            if (files.find(file) != -1):
                print(files)
 
+#BUSCA PELO CLIENTE
 def foundcliente(cliente):
     found = 0
     for rootdir, dirs , file in os.walk(path):
@@ -18,6 +19,20 @@ def foundcliente(cliente):
     if found == 0:
         print("Não foi encontrado o cliente: "+cliente+"\n")
 
+#DELETA O CLIENTE
+def deletecliente(cliente):
+    found = 0
+    for rootdir, dirs , file in os.walk(path):
+        for file in file:
+            if (file.find(cliente.lower()) != -1) and (file[-1:] == cliente[-1:]):
+                os.remove(rootdir + "/" + file)
+                found+=1
+    if found == 0:
+        print("Não foi encontrado o cliente: "+cliente+"\n")
+    else:
+        print("Cliente {} foi deletado com sucesso.".format(cliente))
+
+#BUSCA PELO TIPO DE ARQUIVO: METRICS OU CALLS
 def typefile():
     opcao = input("Escolha umas das opções acima (1 ou 2): ")
 
@@ -35,7 +50,7 @@ def typefile():
         print("Digite um numero que seja 1 ou 2\n")
         return
         
-   
+#MENU DAS OPÇOES   
 def menu():
     print("\n0 - Sair")
     print("1 - Filtrar por nome do cliente")
@@ -47,7 +62,7 @@ opcao = 1
 while opcao != 0:
     menu()
     opcao = (input("Escolhe uma das opcões: "))
-    
+
     if opcao.isdigit() == False:
         print("Digite um numero\n")
         continue
@@ -75,7 +90,9 @@ while opcao != 0:
         filtro(data)
     
     elif int(opcao) == 4:
-        print("Excluir todos os arquivos do cliente\n")
+        cliente = input("Digite o nome do cliente: ")
+        deletecliente(cliente)
+
     elif int(opcao) >= 5:
         print("Digite um numero valido das opções")
    
