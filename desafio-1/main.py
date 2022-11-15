@@ -1,6 +1,13 @@
 import os
 path = "../desafio"
 
+
+def filtro(file):
+    for rootdir, dirs , files in os.walk(path):
+       for files in files:
+           if (files.find(file) != -1):
+               print(files)
+
 def foundcliente(cliente):
     found = 0
     for rootdir, dirs , file in os.walk(path):
@@ -20,18 +27,15 @@ def typefile():
 
     if int(opcao) == 1:
         file = "calls"
+        filtro(file)
     elif int(opcao) == 2:
         file = "metrics"
+        filtro(file)
     else:
         print("Digite um numero que seja 1 ou 2\n")
         return
         
-    for rootdir, dirs , files in os.walk(path):
-        for files in files:
-            if (files.find(file) != -1):
-                print(files)
    
-
 def menu():
     print("\n0 - Sair")
     print("1 - Filtrar por nome do cliente")
@@ -63,7 +67,13 @@ while opcao != 0:
         typefile()
         
     elif int(opcao) == 3:
-        print("Filtrando por data solictada\n")
+        ano = input("Digite o ano: ")
+        mes = input("Digite o mes: ")
+        dia = input("Digite o dia: ")
+        data = ano + "_"+ mes + "_" + dia
+
+        filtro(data)
+    
     elif int(opcao) == 4:
         print("Excluir todos os arquivos do cliente\n")
     elif int(opcao) >= 5:
