@@ -11,8 +11,29 @@ def foundcliente(cliente):
     if found == 0:
         print("Não foi encontrado o cliente: "+cliente+"\n")
 
+def typefile():
+    opcao = input("Escolha umas das opções acima (1 ou 2): ")
+
+    if opcao.isdigit() == False:
+        print("Digite um numero\n")
+        return
+
+    if int(opcao) == 1:
+        file = "calls"
+    elif int(opcao) == 2:
+        file = "metrics"
+    else:
+        print("Digite um numero que seja 1 ou 2\n")
+        return
+        
+    for rootdir, dirs , files in os.walk(path):
+        for files in files:
+            if (files.find(file) != -1):
+                print(files)
+   
+
 def menu():
-    print("0 - Sair")
+    print("\n0 - Sair")
     print("1 - Filtrar por nome do cliente")
     print("2 - Filtrar por tipo de arquivo")
     print("3 - Filtrar por data solicitada")
@@ -35,7 +56,12 @@ while opcao != 0:
         foundcliente(cliente)
 
     elif int(opcao) == 2:
-        print("Filtrando por tipo de arquivo\n")
+        print("\nTipo de arquivo")
+        print("1 - Calls")
+        print("2 - Metrics\n")
+
+        typefile()
+        
     elif int(opcao) == 3:
         print("Filtrando por data solictada\n")
     elif int(opcao) == 4:
