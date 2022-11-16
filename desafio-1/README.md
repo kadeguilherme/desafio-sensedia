@@ -44,6 +44,6 @@ $ git clone https://github.com/kadeguilherme/desafio-sensedia.git
 # Executar o comando dentro da pasta /desafio-1
 $ pyhton3 main.py
 ```
-```
+
 
 
