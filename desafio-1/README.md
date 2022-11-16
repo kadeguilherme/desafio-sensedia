@@ -35,7 +35,23 @@ Após a opcào escolhida é passa como parâmetro para a função  filtro.
 Função recebe um parâmetro file, que pode ser o tipo de arquivo ou data.
 Essa função irá pecorrer o diretorio, subdiretorios e os arquivos, apos isso verifica se cada arquivo corresponde ao parametro passado para a função caso seja correspondente imprimirá.
 
+## Arvore de diretorios
+Estrutura do arquivo tem que igual para a busca dos arquivos funcionar.
+O diretorio ***desafio*** tem que está dentro do diretorio ***desafio-sensedia***. Conforme abaixo.
 
+```
+├── desafio-sensedia
+├── desafio
+|  └── volume_1
+|  └── volume_2
+|  └── volume_3
+|  └── volume_4
+|  └── volume_5
+|  └── volume_6
+├── desafio-1
+|  ├── main.py
+├── desafio-2
+```
 ## Como executar
  ```bash
 # Clone do repositório
