@@ -29,7 +29,7 @@ No final é impresso a cliente que foi excluído.
 
 ### typefile
 A funcào é responsável pela escolha do tipo do arquivo, calls ou metrics.
-Após a opcào escolhida é passa como parâmetro para a função  filtro.
+Após a opcào escolhida é passada como parâmetro para a função  filtro.
 
 ### filtro
 Função recebe um parâmetro file, que pode ser o tipo de arquivo ou data.
