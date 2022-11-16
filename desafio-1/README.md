@@ -4,7 +4,7 @@ Projeto foi desenvolvido em Python na versão 3.10.6.<br>
 Foi utilizado o módulo python.os que é muito útil quando precisamos mexer com sistema de arquivos.
 
 ## Construção do código
-Utilizei o paradigma funcional na construção desse codigo, ou seja, para simplifica a leitura, o codigo é composto por multiplas funções que faz uma determinada tarefa.  
+Utilizei o paradigma funcional na construção desse código, ou seja, para simplifica a leitura, o código é composto por multiplas funções que faz uma determinada tarefa.  
 
 ### menu
 Essa função é a responsável em exibir as opções:
@@ -15,15 +15,15 @@ Essa função é a responsável em exibir as opções:
 4 - Excluir todos os arquivos do cliente<br>
 
 ### foundcliente
-Funcão recebe um parâmetro cliente, que é nome do cliente passado para a função.
-Foi criada um variável found que conta o número de cliente econtrados, caso não seja encontrado nenhum entrará na condição found == 0.
-A função contém dois laços de repetição que pecorrer o diretorio, subdiretorios e os arquivos, apos isso verifica se o arquivo contém o nome do cliente passado como parâmetro.
+Função recebe um parâmetro cliente, que é nome do cliente passado para a função.
+Foi criada um variável found que conta o número de clientes econtrados, caso não seja encontrado nenhum entrará na condição found == 0.
+A função contém dois laços de repetição que pecorrer o diretório, subdiretórios e os arquivos, apos isso verifica se o arquivo contém o nome do cliente passado como parâmetro.
 Na verificação utulizei o method split para separar a string e em seguida comparo com o parâmetro cliente.
 
 ### deletecliente
-Funcão é bem parecida com a foundcliente, recebe um parâmetro cliente, que é nome do cliente passado para a função.
+Função é bem parecida com a foundcliente, recebe um parâmetro cliente, que é nome do cliente passado para a função.
 Foi criada um variável found que conta o número de cliente econtrados, caso não seja encontrado nenhum entrará na condição found == 0.
-A função contém dois laços de repetição que pecorrer o diretorio, subdiretorios e os arquivos, apos isso verifica se o arquivo contém o nome do cliente passado como parâmetro, caso seja verdadeira a comparação, o arquivo é excluido.
+A função contém dois laços de repetição que pecorrer o diretório, subdiretórios e os arquivos, apos isso verifica se o arquivo contém o nome do cliente passado como parâmetro, caso seja verdadeira a comparação, o arquivo é excluido.
 Na verificação utulizei o method split para separar a string e em seguida comparo com o parâmetro cliente.
 No final é impresso a cliente que foi excluído.
 
@@ -33,10 +33,10 @@ Após a opcào escolhida é passada como parâmetro para a função  filtro.
 
 ### filtro
 Função recebe um parâmetro file, que pode ser o tipo de arquivo ou data.
-Essa função irá pecorrer o diretorio, subdiretorios e os arquivos, apos isso verifica se cada arquivo corresponde ao parametro passado para a função caso seja correspondente imprimirá.
+Essa função irá pecorrer o diretório, subdiretorios e os arquivos, apos isso verifica se cada arquivo corresponde ao parâmetro passado para a função caso seja correspondente imprimirá.
 
-## Arvore de diretorios
-Estrutura do arquivo tem que igual para a busca dos arquivos funcionar.
+## Arvóre de diretórios
+Estrutura do arquivo tem que ser igual para a busca dos arquivos funcionar.
 O diretorio ***desafio*** tem que está dentro do diretorio ***desafio-sensedia***. Conforme abaixo.
 
 ```
