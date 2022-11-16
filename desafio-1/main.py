@@ -26,7 +26,6 @@ def deletecliente(cliente):
         for file in file:
             if (file.split('_')[-1] == cliente.lower()):
                 os.remove(os.path.join(rootdir, file))
-                exit()
                 found+=1
     if found == 0:
         print("Não foi encontrado o cliente: "+cliente+"\n")
