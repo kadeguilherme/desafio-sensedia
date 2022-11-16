@@ -58,7 +58,7 @@ O diretorio ***desafio*** tem que está dentro do diretorio ***desafio-sensedia*
 $ git clone https://github.com/kadeguilherme/desafio-sensedia.git
 
 # Executar o comando dentro da pasta /desafio-1
-# obs: No meu caso a opcão excluir cliente, deverá executar o main.py com usuário root
+# OBS: No meu caso a opcão excluir cliente deverá ser executar com usuário root.
 $ pyhton3 main.py
 ```
 Após executar o camando exibirá no terminal o menu a seguir:<br>
