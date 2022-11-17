@@ -41,16 +41,16 @@ O diretorio ***desafio*** tem que está dentro do diretorio ***desafio-sensedia*
 
 ```
 ├── desafio-sensedia
-├── desafio
-|  └── volume_1
-|  └── volume_2
-|  └── volume_3
-|  └── volume_4
-|  └── volume_5
-|  └── volume_6
-├── desafio-1
-|  ├── main.py
-├── desafio-2
+ ├── desafio
+ |  └── volume_1
+ |  └── volume_2
+ |  └── volume_3
+ |  └── volume_4
+ |  └── volume_5
+ |  └── volume_6
+ ├── desafio-1
+ |  ├── main.py
+ ├── desafio-2
 ```
 ## Como executar
  ```bash
